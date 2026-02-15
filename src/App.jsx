@@ -98,7 +98,7 @@ export default function App() {
         </p>
 
         <a
-          href="mailto:yourmail@gmail.com"
+          href="mailto:1rn21is106.prashanthdm@gmail.com"
           className="px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 hover:scale-110 transition duration-300 inline-block"
         >
           Contact Me
