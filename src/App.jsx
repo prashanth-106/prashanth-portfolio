@@ -43,15 +43,18 @@ export default function App() {
           <a href="https://github.com/prashanth-106" target="_blank" rel="noopener noreferrer">
             <Github className="hover:scale-125 transition duration-300" size={28} />
           </a>
-
           <a href="https://www.linkedin.com/in/prashanth-d-m" target="_blank" rel="noopener noreferrer">
             <Linkedin className="hover:scale-125 transition duration-300" size={28} />
           </a>
-
           <a href="https://leetcode.com/u/prashanthdm/" target="_blank" rel="noopener noreferrer">
-            <ExternalLink className="hover:scale-125 transition duration-300" size={28} />
+            <img
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/leetcode.svg"
+              alt="LeetCode"
+              className="w-7 h-7 hover:scale-125 transition duration-300 invert"
+            />
           </a>
         </div>
+
       </section>
 
       {/* About Section */}
