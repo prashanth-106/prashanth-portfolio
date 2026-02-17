@@ -2,7 +2,7 @@ import React, { useState } from "react"; import { motion, AnimatePresence } from
 
 const nav = ["Home","About","Projects","Skills","Contact"];
 
-const projects = [ { title:"AI Tutor – Adaptive Learning System", tag:"AI", tech:["React","Node.js","TensorFlow","MongoDB"], desc:"Adaptive learning platform with analytics dashboard and real‑time feedback." }, { title:"Online Examination System", tag:"FullStack", tech:["Angular","Spring Boot","MySQL"], desc:"Secure exam platform with MCQ evaluation and reporting." }, { title:"College Event Management System", tag:"Web", tech:["PHP","MySQL","HTML","CSS"], desc:"Centralized event registration and scheduling system." }, { title:"Hand Sign Recognition", tag:"AI", tech:["Python","OpenCV","TensorFlow","Mediapipe"], desc:"ASL gesture recognition converting signs into text and speech." }, { title:"Animal Image Classification", tag:"AI", tech:["Python","CNN","Keras","Streamlit"], desc:"CNN model using pretrained networks for species identification." }, ];
+const projects = [ { title:"Rapid Car Booking", tag:"FullStack", tech:["TypeScript","Java","MySQL","Spring Boot","Angular"], desc:"Full‑stack car rental system with responsive Angular frontend, Spring Boot backend and JWT authentication." }, { title:"AI Tutor – Adaptive Learning System", tag:"AI", tech:["Python","Django","TensorFlow","MongoDB"], desc:"Adaptive learning platform with analytics dashboard and real‑time feedback." }, { title:"Online Examination System", tag:"FullStack", tech:["Angular","Spring Boot","MySQL"], desc:"Secure exam platform with MCQ evaluation and reporting." }, { title:"College Event Management System", tag:"Web", tech:["PHP","MySQL","HTML","CSS"], desc:"Centralized event registration and scheduling system." }, { title:"Hand Sign Recognition", tag:"AI", tech:["Python","OpenCV","TensorFlow","Mediapipe"], desc:"ASL gesture recognition converting signs into text and speech." }, { title:"Animal Image Classification", tag:"AI", tech:["Python","CNN","Keras","Streamlit"], desc:"CNN model using pretrained networks for species identification." }, ];
 
 const skills = { Languages:["Python","Java","C","SQL","JavaScript","PHP"], Frameworks:["Django","AngularJS","TensorFlow","Keras","OpenCV","Mediapipe"], Tools:["Git","GitHub","AWS","MySQL","Pandas","Scikit‑learn"], };
 
@@ -16,11 +16,27 @@ return ( <div className="bg-black text-white min-h-screen font-sans scroll-smoot
   <nav className="fixed top-0 w-full backdrop-blur bg-black/40 border-b border-white/10 z-50">
     <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
       <span className="font-bold text-xl tracking-wider">Prashanth</span>
-      <div className="flex gap-6 text-sm">
+
+      {/* Desktop Menu */}
+      <div className="hidden md:flex gap-6 text-sm">
         {nav.map(n=> (
           <a key={n} href={`#${n.toLowerCase()}`} className="hover:text-cyan-400 transition">{n}</a>
         ))}
       </div>
+
+      {/* Mobile Hamburger */}
+      <button onClick={()=>setFilter(f=>f)} className="md:hidden flex flex-col gap-1">
+        <span className="w-6 h-0.5 bg-white"></span>
+        <span className="w-6 h-0.5 bg-white"></span>
+        <span className="w-6 h-0.5 bg-white"></span>
+      </button>
+    </div>
+
+    {/* Mobile Menu */}
+    <div className="md:hidden px-6 pb-4 flex flex-col gap-4 text-sm">
+      {nav.map(n=> (
+        <a key={n} href={`#${n.toLowerCase()}`} className="hover:text-cyan-400 transition">{n}</a>
+      ))}
     </div>
   </nav>
 
